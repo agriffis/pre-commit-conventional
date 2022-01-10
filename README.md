@@ -17,8 +17,12 @@ repos:
       - id: conventional-commit
 ```
 
-This project dogfoods itself, so you can also look at our
-[.pre-commit-config.yaml](https://github.com/agriffis/pre-commit-conventional/blob/main/.pre-commit-config.yaml)
+Your developers will also need to install the `commit-msg` hook since it's not
+installed by default (only the `pre-commit` hook is installed by default):
+
+```
+pre-commit install -t commit-msg
+```
 
 ## Configuration
 
