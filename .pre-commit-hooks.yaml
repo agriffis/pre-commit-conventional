@@ -1,0 +1,7 @@
+- id: conventional-commit
+  name: Conventional Commit
+  description: Check commit message against Conventional Commits spec
+  entry: hook.bash
+  language: script
+  always_run: true
+  stages: [commit-msg]
