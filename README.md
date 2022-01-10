@@ -49,3 +49,16 @@ repos:
       - id: conventional-commit
         args: [--require-scope, --scopes, foo:bar:baz]
 ```
+
+## FAQ
+
+### Why is hook.bash so big?
+
+The main part of the script is ~100 lines at the top. The rest is the options
+parser, see [ghettopt](https://github.com/agriffis/ghettopt)
+
+### Does this depend on JavaScript?
+
+The reason for `package.json` and related files is to power
+[semantic-release](https://github.com/semantic-release/semantic-release). The
+hook itself is just bash and grep.
