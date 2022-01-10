@@ -4,7 +4,19 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
-    ["@semantic-release/git", {"assets": ["CHANGELOG.md"]}],
+    [
+      "@google/semantic-release-replace-plugin",
+      {
+        "replacements": [
+          {
+            "files": ["README.md"],
+            "from": "rev: .*",
+            "to": "rev: ${nextRelease.version}"
+          }
+        ]
+      }
+    ],
+    ["@semantic-release/git", {"assets": ["CHANGELOG.md", "README.md"]}],
     "@semantic-release/github"
   ]
 }
