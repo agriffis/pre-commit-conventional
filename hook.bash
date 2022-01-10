@@ -2,7 +2,7 @@
 #
 # pre-commit hook to check commit message for conventional correctness.
 #
-# Copyright 2021 Aron Griffis <aron@arongriffis.com>
+# Copyright 2022 Aron Griffis
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
