@@ -1,0 +1,8 @@
+repos:
+  - repo: https://github.com/agriffis/pre-commit-conventional
+    rev: v1.0.0
+    hooks:
+      - id: conventional-commit
+
+ci:
+  autoupdate_commit_msg: 'chore(pre-commit): autoupdate'
