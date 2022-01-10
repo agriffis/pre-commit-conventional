@@ -1,15 +1,13 @@
-name: Tests
+name: tests
 on: [push]
 jobs:
-  tests:
-    name: Tests
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: ./test.bash
   release:
-    name: Semantic Release
-    needs: tests
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
