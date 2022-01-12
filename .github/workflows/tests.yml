@@ -2,7 +2,10 @@ name: tests
 on: [push]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{matrix.os}}
     steps:
       - uses: actions/checkout@v2
       - run: ./test.bash
