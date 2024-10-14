@@ -11,5 +11,5 @@ repos:
         entry: ./test.bash
         always_run: true
         pass_filenames: false
-        stages: [push]
+        stages: [pre-push]
         language: system
